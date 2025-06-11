@@ -1,0 +1,130 @@
+           **javascript notes**
+
+window object 
+>  it is represent an open window in the browser
+>  it is browsers object and not js, it is automatically created by the browser
+> console.log is the part of window
+
+                  **DOM**
+
+> All the elements of the html are in javascript in the form of an object
+> and this object is called as document
+> and this is document object is inside the windows object
+> console.log -> print objects as element
+> console.dir -> use to print object
+> dom is the representation or model of the html code
+> when a page is loaded the browser creates a document object model of the page
+> window is a global object
+> document.body ->prints body object
+> childnode -> how many nodes inside a node
+> html ko js main access karne ka tarike ka hai dom
+> in order to do dynamic manipulation (i.e without doing any changes in html css) dom is used.
+> if we load our script before body dom elements aren't accessible.
+> hence write script at the end before closing the body tag.
+>DOM PROPERTIES
+   > innerText : only gives the text
+               : also used to change text
+   > innerHTML : TEXT + HTML CONTENT
+               : also usef to change formatting
+> textcontent: returns textual content even for hidden elements
+
+
+
+           **DOM PART -II**
+
+> .getAttribute(attr) 
+   -> to get the attribute value
+> .setAttribute(attr,value)
+   -> to set the attribute value
+
+> div.style
+> in css font-size :: in js fontSize
+>div.style.fontSize="new_size";
+> this style is inline styling
+
+
+
+>>> INSERT ELEMENTS 
+> node.append(el) -> adds node at the end
+> node.prepend(el) -> add at the start
+> node.before(el) -> add before the node
+> node.after(el) -> adds after the node
+
+>>> delete element
+> node.remove() removes the node
+
+
+>set attribute overrides the classs name when you add a new one
+> classlist offers the element to be styles by two classes
+
+
+         **Events in javascript**
+> the change  in the state of an object is known as event 
+> e.g onclick="console.log('buuton was clicked)
+    -> this is written inside html tag which is called inline event-handling
+> js event handling has greater priority then inline.
+
+
+>>>> event object
+> it is a special object which have all the info regarding the event
+> client
+> client
+> type
+> target
+
+
+>>>> event listeners
+>drawbacks of the inline handling -> has lesser prio
+> drawback of the js event handling -> if the same event is handled second time, the second time handling will override the first one
+> through EventListner we can handle the class as many times, as we can and it would not override its previously handled task.
+
+> as we have created multiple handling fot a particular event, there location in  memory is different.
+> so in order to remove them the  callback ref should be same
+> so if we think we need to remove a function , we store it in a const.
+> const handler3 = () =>
+{
+console.log("buuton 1 was clicked");
+};
+bn1.addEventListner("click",handler3);
+btn1.removeEventListner("click",handler3);
+
+
+
+         **classes and objects**
+> js objects have a special property called prototype
+> prototype is itself an object
+> some properties are present without creating in an object when created, due to prototype
+>classes are like a template
+> let obj = class()
+> if the function requires an argument and no argument is passed during calling the function then it wont give error.
+
+                 ** sync **
+>> synchronous -> code runs in a particular sequence given in the program 
+> each instruction waits for the previous instruction
+
+>> asynchronous -> due to synchronous programming , sometimes imp instructions get blocked due to some previous instructions which causes a delay in the ui 
+
+
+>>>  callback hell
+> nested callbacks stacked below one another forming a pyramind structure.
+> difficult to understand for programmer
+
+
+
+>> promises
+> solution to callback hell
+> let promise =new Promise((resolve, reject) =>
+{ console.log()
+};
+> promise 
+-> pending
+-> fulfilled
+-> rejected
+
+
+
+
+
+
+
+
